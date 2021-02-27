@@ -30,7 +30,6 @@ public class PasteDivider extends AnAction {
     }
 
     public static String getDivider(String text) {
-        boolean textHasNewline = text.contains("\n");
         String textToPaste = text.trim();
 
         if (textToPaste.length() <= dividerLength) {
@@ -38,7 +37,7 @@ public class PasteDivider extends AnAction {
             int dividerHalfLength = initialDivider.length() / 2;
             int textHalfLength = textToPaste.length() / 2;
             String leftSide = initialDivider.substring(0, dividerHalfLength - textHalfLength);
-            String rightSide = initialDivider.substring(dividerHalfLength + textHalfLength + (textToPaste.length() % 2)) + (textHasNewline ? "\n\n" : "\n");
+            String rightSide = initialDivider.substring(dividerHalfLength + textHalfLength + (textToPaste.length() % 2));
             String output = leftSide + textToPaste + rightSide;
 
             return output;
