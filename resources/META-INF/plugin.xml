@@ -1,0 +1,22 @@
+<idea-plugin>
+    <id>com.code-divider</id>
+    <name>Code Divider</name>
+    <version>1.0</version>
+    <vendor email="egor7orlov@gmail.com" url="https://github.com/egor7orlov">Yehor Orlov</vendor>
+
+    <description>Allows you to quick split code using dividers made from comments.
+        Press Alt+X to create simple divider on current caret position.
+        Selected text will be placed right in center of divider.
+    </description>
+
+    <idea-version since-build="173.0"/>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <actions>
+        <action id="PasteDivider" class="PasteDivider" text="Paste Divider">
+            <keyboard-shortcut first-keystroke="alt X" keymap="$default"/>
+        </action>
+    </actions>
+
+</idea-plugin>
