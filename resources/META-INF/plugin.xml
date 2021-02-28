@@ -6,7 +6,7 @@
 
     <description>Allows you to quick split code using dividers made from comments.
         Press Alt+X to create simple divider on current caret position.
-        Selected text will be placed right in center of divider.
+        If text is selected it will be placed right in center of divider.
     </description>
 
     <idea-version since-build="173.0"/>
