@@ -32,14 +32,7 @@ public class PasteDivider extends AnAction {
                     if (selectedText.length() <= dividerLength) {
                         document.replaceString(start, end, getDivider(selectedText));
                     } else {
-                        JTextField textField = new JTextField("(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧ Try shorter text", 20);
-                        JComponent panel = new JPanel();
-
-                        panel.add(textField);
-                        JBPopupFactory.getInstance()
-                                .createComponentPopupBuilder(panel, textField)
-                                .createPopup()
-                                .showInBestPositionFor(Objects.requireNonNull(e.getData(PlatformDataKeys.EDITOR)));
+                        showPopup(e, "(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧ Try shorter text");
                     }
                 }
         );
@@ -47,7 +40,7 @@ public class PasteDivider extends AnAction {
         primaryCaret.removeSelection();
     }
 
-    public static String getDivider(String textToWrap) {
+    private static String getDivider(String textToWrap) {
         String initialDivider = "/* " + "-".repeat(dividerLength) + " */";
         int dividerHalfLength = initialDivider.length() / 2;
         int textHalfLength = textToWrap.length() / 2;
@@ -55,5 +48,16 @@ public class PasteDivider extends AnAction {
         String rightSide = initialDivider.substring(dividerHalfLength + textHalfLength + (textToWrap.length() % 2));
 
         return leftSide + textToWrap + rightSide;
+    }
+
+    private static void showPopup(AnActionEvent e, String text) {
+        JTextField textField = new JTextField(text, 20);
+        JComponent panel = new JPanel();
+
+        panel.add(textField);
+        JBPopupFactory.getInstance()
+                .createComponentPopupBuilder(panel, textField)
+                .createPopup()
+                .showInBestPositionFor(Objects.requireNonNull(e.getData(PlatformDataKeys.EDITOR)));
     }
 }
