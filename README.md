@@ -2,7 +2,7 @@
   <img src="resources/META-INF/pluginIcon.svg" alt="plugin-logo" style="width:200px; align: center;"/>
 </p>
 
-> # Code divider
+# Code divider
 
 ---
 
