@@ -4,8 +4,6 @@
 
 # Code divider
 
----
-
 Plugin for Intellij based IDEs, which allows you to divide your code with lines made of comments.
 
 - Press Alt+X to create empty divider on current caret's position.
