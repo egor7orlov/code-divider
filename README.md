@@ -1,4 +1,4 @@
-<img src="resources/META-INF/pluginIcon.svg" alt="plugin-logo" style="width:200px;"/>
+<img src="resources/META-INF/pluginIcon.svg" alt="plugin-logo" style="width:200px; margin-left: auto; margin-right: auto"/>
 
 > # Code divider
 
