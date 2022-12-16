@@ -1,4 +1,4 @@
-[logo](resources/META-INF/pluginIcon.svg)
+![logo](resources/META-INF/pluginIcon.svg)
 
 > # Code divider
 
